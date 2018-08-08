@@ -3,10 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Lab1Pt1"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:local="clr-namespace:Lab1Pt1" Background="OrangeRed"
+        mc:Ignorable="d" Icon="pack://application:,,,/Resources/circustent.png"
+        Title="MainWindow" Height="250" Width="500">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="TxtNum1" Text="{Binding Num1, Mode=OneWay}" Grid.Column="0" Grid.Row="0" FontSize="36" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" PreviewTextInput="TxtNum1_PreviewTextInput"/>
+        <TextBox Name="TxtNum2" Text="{Binding Num2, Mode=OneWay}" Grid.Column="1" Grid.Row="0" FontSize="36" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" PreviewTextInput="TxtNum2_PreviewTextInput"/>
+        <TextBlock Name="TxtOutput" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Name="BtnSend" Content="Send" Grid.Column="0" Grid.Row="2" FontSize="36" VerticalAlignment="Center" Click="BtnSend_Click"/>
+        <Button Name="BtnExit" Content="Exit" Grid.Column="1" Grid.Row="2" FontSize="36" VerticalAlignment="Center" Click="BtnExit_Click"/>
     </Grid>
 </Window>
