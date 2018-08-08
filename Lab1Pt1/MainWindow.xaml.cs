@@ -112,6 +112,14 @@ namespace Lab1Pt1
         {
             e.Handled = !IsTextAllowed(e.Text);
         }
+
+        private void TxtNum1_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                BtnSend_Click(BtnSend, e);
+            }
+        }
     }
 
     //public class Comparison

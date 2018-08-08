@@ -16,8 +16,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox Name="TxtNum1" Text="{Binding Num1, Mode=OneWay}" Grid.Column="0" Grid.Row="0" FontSize="36" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" PreviewTextInput="TxtNum1_PreviewTextInput"/>
-        <TextBox Name="TxtNum2" Text="{Binding Num2, Mode=OneWay}" Grid.Column="1" Grid.Row="0" FontSize="36" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" PreviewTextInput="TxtNum2_PreviewTextInput"/>
+        <TextBox Name="TxtNum1" Text="{Binding Num1, Mode=OneWay}" Grid.Column="0" Grid.Row="0" FontSize="36" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" PreviewTextInput="TxtNum1_PreviewTextInput" KeyDown="TxtNum1_OnKeyDown"/>
+        <TextBox Name="TxtNum2" Text="{Binding Num2, Mode=OneWay}" Grid.Column="1" Grid.Row="0" FontSize="36" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" PreviewTextInput="TxtNum2_PreviewTextInput" KeyDown="TxtNum1_OnKeyDown"/>
         <TextBlock Name="TxtOutput" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Button Name="BtnSend" Content="Send" Grid.Column="0" Grid.Row="2" FontSize="36" VerticalAlignment="Center" Click="BtnSend_Click"/>
         <Button Name="BtnExit" Content="Exit" Grid.Column="1" Grid.Row="2" FontSize="36" VerticalAlignment="Center" Click="BtnExit_Click"/>
